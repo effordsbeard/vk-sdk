@@ -6,7 +6,7 @@ class Newsfeed(VKAPI):
 
     def __init__(self, access_token=''):
         super(Newsfeed, self).__init__(access_token=access_token)
-
+    
     def add_ban(self, **params):
         self.set_method('addBan')
         return self.send(params)
