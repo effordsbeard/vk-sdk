@@ -1,7 +1,7 @@
 import urlparse, requests
 
 class VKAPI(object):
-    base_url = 'https://api.vkapi.com/method/'
+    base_url = 'https://api.vk.com/method/'
     method_class = ''
     method = ''
     version = 5.62
@@ -16,7 +16,6 @@ class VKAPI(object):
             'access_token': self.access_token
         }
         params.update(_params)
-
         try:
             res = requests \
                 .get(url, params=params, timeout=20) \
